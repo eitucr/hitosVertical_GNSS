@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<link rel="stylesheet" href="css/barra.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta charset="UTF-8">
+	<title>Visor EIT - Hitos IGN</title>   
+
+<!--Levantar servidor GeoJSON-->
+<!--python -m http.server 8888-->
+<!--http://localhost:8888/-->
+
+	<!-- Hoja de estilos CSS de Leaflet -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>	
+	<!-- Biblioteca JS de Leaflet -->
+	<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>	
+	<!-- Complemento Leaflet-providers -->
+	<script src="js/leaflet-providers.js"></script>	
+	
+	<!-- Hoja de estilos CSS adicionales -->
+	<link rel="stylesheet" href="css/estilos.css"/>	
+
+	<!-- En HTML: enlace a Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+	integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	crossorigin="anonymous" />
+	
+	<!-- Enlace a biblioteca JQuery -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous">
+	</script>
+
+	<!-- Complemento Leaflet-choropleth -->
+	<script src="js/choropleth.js"></script>
+	
+	<!-- Control de medidas -->
+	<link rel="stylesheet" href="https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.css" />
+	<script src="https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.js"></script>
+	
+</head>
+<body style="background: #eeeeee">
+<div class="topnav">
+		<a class="active" href="index.html">Home</a>
+		<!-- <a href="index1.html">Docencia</a>
+		<a href="index2.html">Investigación</a>
+		<a href="index3.html">Acción Social</a> -->
+	</div>
+
+<div align="center" id="titu">
+	<h1><br><img src="img/ucr.png" align="left" alt="Logo UCR" height="100">
+	<img src="img/eit.jpg" align="right" alt="Logo EIT" height="100">
+	<br>	
+	UNIVERSIDAD DE COSTA RICA
+	<br><br>
+	</h1>
+</div>
+
+<h1>
+<img src="img/certificado.png" align="right" alt="Logo certificado UCR" height="50">
+<img src="img/aapia.png" align="right" alt="Logo AAPIA" height="50">
+</h1>
+
+<p align="justify">
+<h2>
+Este visor tiene como objetivo mostrar el resultado del proyecto de investigación 341B6784 "IDENTIFICACIÓN DE BANCOS DE NIVEL DEL IGN EN EL PAÍS" <br>
+Realizado por: Ing. Gabriela Cordero Gamboa y Ing. Gustavo Lara Morales. <br>
+</h2>
+</p>
+
+<h3>
+Resumen ejecutivo del proyecto<br><br>
+En los años de 1940 a 1965 en el Instituto Geográfico Nacional se creó una red vertical de nivelación geométrica con Bancos de nivel con ayuda internacional. De esa red existe mucha información en los archivos análogos del IGN como los son valores de alturas niveladas, gravedad
+y mapas escaneadas donde se presenta los nodos de los circuitos de nivelación.<br> 
+Sin embargo, después de haber realizado las mediciones no se realizó ningún mantenimiento y por tanto a la fecha, se desconoce el estado y existencia de los Bancos de Nivel (BNs).<br> 
+Por lo cual en el proyecto de investigación se planteó la necesidad de localizar y diagnosticar la información de esos hitos, debido a la gran relevancia que contienen para los trabajos geodésicos desde el punto de vista de referencia de verticalidad y que a la vez son el insumo para futuras mediciones de nivelación. Esto con la proyección futura de desarrollar un marco altimétrico unificado (nivelación ortométrica, gravedad) para lograr el cálculo de números geopotenciales. <br>
+El proyecto identificó los puntos existentes in situ a partir de las fichas análogas que tiene el IGN, y con los resultados obtenidos se desarrolló una base de datos con reseñas actualizadas de cada uno de ellos que puedan ser empleados como referencias públicas para los trabajos en diferentes campos de estudio a disposición de todos los usuarios de forma gratuita.
+<br><br>
+Tabla de datos <A href="datos/BasedeDatos.pdf" target="_blank" >Base de datos</A>
+</h3>
+<h2 style="color:red;">
+NOTA: Si utiliza la información mostrada en este visor, debe citar como fuentes a la Universidad de Costa Rica la Escuela de Ingeniería Topográfica y a sus autores.
+</h2>
+
+
+<div id="mapid"> </div>
+
+	
+<script src="js/scripts.js"></script>
+<h3>Visor Open Source de la Escuela de Ingeniería Topográfica (EIT).
+<br><br>
+Ing. Gustavo Lara Morales, MASIGTE. Contacto gustavo.lara@ucr.ac.cr  <br>
+Ing. Gabriela Cordero Gamboa, MSc. Contacto gabriela.corderogamboa@ucr.ac.cr
+</h3>
+
+
+
+</div>	
+</body>
+</html>
