@@ -174,7 +174,7 @@ makemap({
 makemap({
 	popups:[{img:"img/12A.png",latlon:[9.99187411944444,-84.7057100222222],title:"12A", open: false,},],});
 makemap({
-	popups:[{img:"img/205A.png",latlon:[10.0609085972222,-84.7588507555556],title:"205A", open: false,},],});
+	popups:[{img:"img/A205A.png",latlon:[10.0609085972222,-84.7588507555556],title:"A205A", open: false,},],});
 makemap({
 	popups:[{img:"img/210C.png",latlon:[9.99552168055556,-84.6734348194445],title:"210C", open: false,},],});
 makemap({
